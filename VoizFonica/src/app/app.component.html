@@ -1,0 +1,77 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!--<app-plans> </app-plans>-->
+<!--<app-userdetails> </app-userdetails>-->
+<style>
+  table, td, th{
+   border: 3px solid black;
+        width:100px;
+        align:center;
+        justify-content: center;
+  }
+</style>
+<body style="background-color:#bacacf; height:100%;">
+<!--<h1  style="text-align:center">Userdetials Page</h1>-->
+<!--<div>-->
+<!--  <h1>-->
+<!--    List of customers-->
+<!--  </h1>-->
+<!--</div>-->
+
+
+
+<!--  <table >-->
+<!--  <tr >-->
+<!--    <td>ID</td>-->
+<!--  <td>NAME</td>-->
+<!--  <td>Email</td>-->
+<!--  <td>Mobile</td>-->
+<!--  </tr>-->
+<!--  <tr *ngFor = "let item of items" >-->
+<!--    <td>{{item.id}}</td>-->
+<!--    <td>{{item.name}}</td>-->
+<!--    <td>{{item.email}} </td>-->
+<!--    <td>{{item.mobile}}</td>-->
+<!--  </tr>-->
+
+<!--</table>-->
+<h4 style="text-align:center;" >Become a customer of VoizFonica by filling below form</h4><br><br><br>
+<form #userform="ngForm" (ngSubmit)="getvalue(userform.value)" style="text-align:center;">
+
+  Enter Id: <input type="number" ngModel name="id"><br>
+  Enter Name: <input type="text" ngModel name="name"><br>
+  Enter Address: <input type="text" ngModel name="address"><br>
+  Enter Aadhar num: <input type="number" ngModel name="aadhar"><br>
+   <button> Submit </button>
+</form>
+</body>
+<!--<ul>-->
+<!--  <li *ngFor = "let item of items">-->
+<!--    {{item.id}}  &nbsp; &nbsp; {{item.title}} &nbsp; &nbsp; {{item.name}}  &nbsp; &nbsp;  {{item.email}}   &nbsp; &nbsp; {{item.mobile}}-->
+<!--  </li>-->
+<!--</ul>-->
+<!--{{ error?.message}}-->
+
+<!--<form #userform="ngForm" (ngSubmit)="getvalue(userform.value)">-->
+
+<!--  Enter Username: <input type="text" ngModel name="name">-->
+<!--  Enter Address: <input type="text" ngModel name="address">-->
+<!--  Enter Id: <input type="number" ngModel name="id">-->
+<!--  Enter Password: <input type="password" ngModel name="pass">-->
+<!--   <button> Submit </button>-->
+<!--</form>-->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<!--<router-outlet></router-outlet>-->

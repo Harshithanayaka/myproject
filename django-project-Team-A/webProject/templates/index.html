@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+     <style>
+        table,th,td{
+        border: 1px solid green;
+        width:100px;
+        }
+    </style>
+</head>
+
+
+<body style="background:antiquewhite">
+<div class="container-flueid" >
+<nav class="navbar navbar-inverse" style="background:midnightblue">
+  <a class="navbar-brand" >VoizFonica</a>
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#abcbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="abcbar">
+    <ul class="nav navbar-nav"  >
+        <li><a href="#prepaid">Prepaid</a></li>
+        <li><a href="#postpaid">Postpaid</a></li>
+        <li><a href="#dongle">Dongle</a></li>
+        <li><a href="register">Register</a> </li>
+        <li><a href="login">Login</a></li>
+    </ul>
+    </div>
+</nav>
+</div>
+
+<!--<center>-->
+<!--    <h1  style="font-family:cursive;">Plans</h1>-->
+<!--    <table>-->
+<!--        <tr>-->
+<!--            <th>Plan_id</th>-->
+<!--            <th>Plan_name</th>-->
+<!--            <th>Plan_Prize</th>-->
+<!--            <th>Actions</th>-->
+<!--        </tr>-->
+<!--        {% for i in records %}-->
+<!--        <tr>-->
+<!--            <td>{{i.id}}</td>-->
+<!--            <td>{{i.pname}}</td>-->
+<!--            <td>{{i.pprize}}</td>>-->
+<!--            <td>-->
+<!--                <a href="/login" style="color:red;">Buy</a>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--        {% endfor %}-->
+<!--   </table>-->
+<!--</center>-->
+
+<h3 style="text-align: center; font-family:cursive;">Prepaid🧐</h3>
+<div class="container" id="prepaid" >
+    <table    class="table"  >
+            <tr >
+
+                <th scope="col">Plan_id</th>
+                <th scope="col">Plan_name</th>
+                <th scope="col">Plan_Prize</th>
+                 <th scope="col">Actions</th>
+
+            </tr>
+              {% for i in records %}
+            <tbody >
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.pname}}</td>
+                    <td>{{i.pprize}}</td>
+                    <td><button type="button" class="btn btn-success"><a href="login" style="color:red;">Buy</a></button></td>
+                </tr>
+
+
+            </tbody>
+          {% endfor %}
+        </table>
+    </div>
+<br><br>
+<h3 style="text-align: center; font-family:cursive;">Postpaid🧐</h3>
+<div class="container" id="postpaid" >
+    <table    class="table"  >
+            <tr >
+
+                <th scope="col">PostPlan_id</th>
+                <th scope="col">PostPlan_name</th>
+                <th scope="col">PostPlan_Prize</th>
+                 <th scope="col">Actions</th>
+
+            </tr>
+              {% for i in postrecords %}
+            <tbody >
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.pstname}}</td>
+                    <td>{{i.pstprize}}</td>
+                    <td><button type="button" class="btn btn-success"><a href="login" style="color:red;">Buy</a></button></td>
+                </tr>
+
+
+            </tbody>
+          {% endfor %}
+        </table>
+    </div>
+
+<h3 style="text-align: center; font-family:cursive;">Dongle🧐</h3>
+<div class="container" id="dongle" >
+    <table    class="table"  >
+            <tr >
+
+                <th scope="col">Dongle_id</th>
+                <th scope="col">Dongle_name</th>
+                <th scope="col">Dongle_Prize</th>
+                 <th scope="col">Actions</th>
+
+            </tr>
+              {% for i in donglerecords %}
+            <tbody >
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.dname}}</td>
+                    <td>{{i.dprize}}</td>
+                    <td><button type="button" class="btn btn-success"><a href="login" style="color:red;">Buy</a></button></td>
+                </tr>
+
+
+            </tbody>
+          {% endfor %}
+        </table>
+    </div>
+
+<br><br>
+<!--<h3 style= "text-align: center; font-family:cursive;">Postpaid Plans🧐</h3>-->
+<!--<div class="container" id="postpaid">-->
+<!--    <table class="table" >-->
+<!--         <tr >-->
+<!--             <th scope="col">Plan</th>-->
+<!--             <th scope="col">Description</th>-->
+
+<!--           </tr>-->
+<!--        <tbody>-->
+<!--            <tr>-->
+<!--                  <td>Rs.499 (Monthly Rental)</td>-->
+<!--                  <td>STD calls Unlimited </td>-->
+<!--                  <td><button type="button" class="btn btn-success" ><a href="login" style="color:red;">Buy</a></button></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                 <td>Rs.799 (Monthly Rental)</td>-->
+<!--                  <td>STD calls Unlimited  </td>-->
+<!--                  <td><button type="button" class="btn btn-success" ><a href="login" style="color:red;">Buy</a></button></td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                 <td>Rs.999 (Monthly Rental)</td>-->
+<!--                 <td>STD calls Unlimited  </td>-->
+<!--                  <td><button type="button" class="btn btn-success" ><a href="login" style="color:red;">Buy</a></button></td>-->
+<!--            </tr>-->
+<!--         </tbody>-->
+<!--    </table>-->
+<!--</div>-->
+
+<!--<br><br>-->
+<!--<h3 style="text-align: center; font-family:cursive; ">Dongle Plans🧐</h3>-->
+<!--<div class="container"  id="dongle">-->
+<!--    <table  class="table"  >-->
+<!--            <tr >-->
+<!--                <th scope="col">Plan</th>-->
+<!--                <th scope="col">Description</th>-->
+<!--                <th scope="col">Validity</th>-->
+<!--                <th></th>-->
+<!--            </tr>-->
+<!--            <tbody >-->
+<!--                <tr>-->
+<!--                    <td>Rs.399</td>-->
+<!--                    <td>1.5GB Data /Day</td>-->
+<!--                    <td>1 month</td>-->
+<!--                    <td><button type="button" class="btn btn-success" ><a href="login" style="color:red;">Buy</a></button></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Rs.599 </td>-->
+<!--                    <td>2GB Data/Day</td>-->
+<!--                    <td>2 months</td>-->
+<!--                    <td><button type="button" class="btn btn-success"  ><a href="login" style="color:red;">Buy</a></button></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Rs.799 </td>-->
+<!--                    <td>2GB Data/Day</td>-->
+<!--                    <td>3 months</td>-->
+<!--                    <td><button type="button" class="btn btn-success"  ><a href="login" style="color:red;">Buy</a></button></td>-->
+<!--                </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--<br><br>-->
+<!--<h3 style="text-align: center; font-family:cursive; ">Offers💃</h3>-->
+<!--<div class="container"  id="offers">-->
+<!--    <table  class="table"  >-->
+<!--            <tr >-->
+<!--                <th scope="col">Offers for Prepaid</th>-->
+<!--                <th scope="col">Offers for Postpaid</th>-->
+<!--                <th></th>-->
+<!--            </tr>-->
+<!--            <tbody >-->
+<!--                <tr>-->
+<!--                    <td>Plan-399: 500 MB Extra data + Free 30min call</td>-->
+<!--                    <td>Plan-499: NetFlix Subscription free</td>-->
+<!--                    <td><button type="button" class="btn btn-success" ><a href="login" style="color:red;">Buy</a></button></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Plan-599: MusicApp premium free for a month </td>-->
+<!--                    <td>Plan-799: NetFlix Subscription free + AmazonPrime Subscription</td>-->
+<!--                    <td><button type="button" class="btn btn-success"  ><a href="login" style="color:red;">Buy</a></button></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>Recharge for year and get vouchers</td>-->
+<!--                    <td>Plan-999:  NetFlix Subscription free + AmazonPrime Subscription + DisneyHotStar free</td>-->
+<!--                    <td><button type="button" class="btn btn-success"  ><a href="login" style="color:red;">Buy</a></button></td>-->
+<!--                </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+
+
+
+</body>
+
+</html>

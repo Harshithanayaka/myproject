@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+     <style>
+        table,th,td{
+        border: 3px solid black;
+        width:100px;
+        }
+    </style>
+</head>
+<body style="background-color:#87CEFA;">
+<center>
+    <h1  style="font-family:cursive;">PrePaid Plans</h1>
+    <table>
+        <tr>
+            <th>Plan_id</th>
+            <th>Plan_name</th>
+            <th>Plan_Prize</th>
+            <th>Actions</th>
+        </tr>
+        {% for i in records %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.pname}}</td>
+            <td>{{i.pprize}}</td>>
+            <td>
+                <a href="/update/{{i.id}}" style="color:#2F4F4F;">Edit</a>
+                <a href="/delete/{{i.id}}" style="color:#2F4F4F;">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button type="button"><a href="/" style="color:#2F4F4F;">Back</a> </button>&nbsp; &nbsp;<button type="button"><a href="/new" style="color:#2F4F4F;">Add new Plans</a> </button>
+    <br><br>
+    <h1  style="font-family:cursive;">PostPaid Plans</h1>
+    <table>
+        <tr>
+            <th>Plan_id</th>
+            <th>Plan_name</th>
+            <th>Plan_Prize</th>
+            <th>Actions</th>
+        </tr>
+        {% for j in postrecords %}
+        <tr>
+            <td>{{j.id}}</td>
+            <td>{{j.pstname}}</td>
+            <td>{{j.pstprize}}</td>>
+            <td>
+                <a href="/upostpaid/{{j.id}}" style="color:#2F4F4F;">Edit</a>
+                <a href="/dpostpaid/{{j.id}}" style="color:#2F4F4F;">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button type="button"><a href="/" style="color:#2F4F4F;">Back</a> </button>&nbsp; &nbsp;<button type="button"><a href="/npostpaid" style="color:#2F4F4F;">Add new Plans</a> </button>
+    <br><br>
+    <h1  style="font-family:cursive;">Dongle Plans</h1>
+    <table>
+        <tr>
+            <th>Plan_id</th>
+            <th>Plan_name</th>
+            <th>Plan_Prize</th>
+            <th>Actions</th>
+        </tr>
+        {% for k in donglerecords %}
+        <tr>
+            <td>{{k.id}}</td>
+            <td>{{k.dname}}</td>
+            <td>{{k.dprize}}</td>>
+            <td>
+                <a href="/udongle/{{k.id}}" style="color:#2F4F4F;">Edit</a>
+                <a href="/ddongle/{{k.id}}" style="color:#2F4F4F;;">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button type="button"><a href="/" style="color:#2F4F4F;">Back</a> </button>&nbsp; &nbsp;<button type="button"><a href="/ndongle" style="color:#2F4F4F;">Add new Plans</a> </button>
+</center>
+</body>
+</html>
